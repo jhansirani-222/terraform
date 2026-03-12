@@ -6,6 +6,7 @@ variable "instance_type" {
 variable "from_port" {
     type = number
     default = 0
+}
 
 variable "cidr_blocks" {
     type = list
