@@ -1,3 +1,9 @@
+#var precedence
+#1.commandline
+#2.vars-file.tfvars
+#3.terraform.tfvars
+#4.environment vars
+#5.prompt
 variable "instance_type" {
     type = string
     default = "t3.micro"
