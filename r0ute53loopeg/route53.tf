@@ -15,6 +15,7 @@ resource "aws_route53_record" "www" {
   name    = "${var.instance_names[count.index]}.${var.domain}"
   type    = "A"
   ttl     = 1
-  records = [var.instance_names[count.index] == "web" ? aws_instance.example[count.index].public_ip : aws_instance.example[count.index].private_ip ]
+  records = [var.instance_names[count.index] == "web" ? aws_instance.example[count.index].public_ip : aws_instance.example[count.index].private_ip]
 }
 #aws_instance.example[count.index].public_ip is output of that
+#locals are just like variables but they have capabilities like storing functions and expressions
